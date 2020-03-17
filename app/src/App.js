@@ -1,27 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import { connect } from 'react-redux'
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          epic win nubblies
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render (){
+
+    const { auth, profile } = this.props;
+    if (!auth.uid) return <Redirect to="/login" />
+    
+    return (
+        <BrowserRouter>
+        <div className="content ht-100v pd-0 dark">
+
+            {/* <Switch>
+              <Route exact path="/v1/dashboard" component={Dashboard} />
+            </Switch> */}
+
+            <h1>App</h1>
+            
+                
+      
+        </div>
+      </BrowserRouter>
+    );
+  }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+    return {
+        auth: state.firebase.auth,
+        profile: state.firebase.profile,
+    }
+}
+
+
+export default connect(mapStateToProps, null)(App);
