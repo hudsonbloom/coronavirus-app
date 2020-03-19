@@ -1,0 +1,195 @@
+@media (min-width: 768px){
+    .seven-cols .times-col,
+    .seven-cols .times-col,
+    .seven-cols .times-col  {
+      width: 100%;
+      *width: 100%;
+      padding: 0 5px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .seven-cols .times-col,
+    .seven-cols .times-col,
+    .seven-cols .times-col {
+      width: 14.285714285714285714285714285714%;
+      *width: 14.285714285714285714285714285714%;
+      padding: 0 5px;
+    }
+  }
+  
+  /**
+   *  The following is not really needed in this case
+   *  Only to demonstrate the usage of @media for large screens
+   */    
+  @media (min-width: 1200px) {
+    .seven-cols .times-col,
+    .seven-cols .times-col,
+    .seven-cols .times-col {
+      width: 14.285714285714285714285714285714%;
+      *width: 14.285714285714285714285714285714%;
+      padding: 0 5px;
+    }
+  }
+
+  .card {
+    box-shadow: 0 2px 3px rgba(28, 39, 60, 0.06);
+  }
+
+  .text-clip {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  
+  .dark .controlsBox {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    right: 10px;
+    /* border: 1px solid rgba(72, 94, 144, 0.16);
+    box-shadow: 0 0 0 1px rgba(0,0,0,.05), 0 4px 24px 2px rgba(0,0,0,.1); */
+    justify-content: space-between;
+    height: 200px;
+    display: inline-block;
+    border: 1px solid black
+  }
+
+  .dark .nav-link {
+    color: #9f9795 !important;
+  }
+
+  .dark .nav-link:hover {
+    color: white !important;
+  }
+  .dark .nav-line .nav-link.active {
+    color: white !important;
+  }
+
+  .dark .nav-line .nav-link.active::after {
+    background: none !important;
+  }
+
+  .dark .box-header {
+    background: #33363d;
+    padding: 8px;
+    border-bottom: 1px solid black;
+    padding-left: 20px;
+  }
+
+  .dark .sidebar-header-title {
+    color: #9f9794;
+    padding: 10px 0px 0px 0px;
+    /* border-bottom: 1px solid #97979b3d; */
+    margin-left: 5px;
+    margin-right: 10px;
+  }
+
+  .dark .puzzle-sidebar {
+    background: #303038;
+  }
+
+  .dark .clues-sidebar {
+    background: #28292e;
+  }
+
+  .dark nav a {
+    padding: 0px 8px;
+    color: #9f9793
+  }
+
+  .dark i {
+    color: #9f9793;
+  }
+
+  .dark .audio-track {
+    width:75px;
+    border-right: 1px solid black;
+  }
+
+  .dark .audio-track .header {
+    background: #191a20;
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid black;
+    font-size: 12px !important;
+  }
+
+  .dark .audio-track .sub-header {
+    background:  #27282e;
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid black;
+    font-size: 12px !important;
+  }
+
+  .dark .audio-track .sub-header2 {
+    background:  #191a20;
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid black;
+    font-size: 12px !important;
+  }
+
+  .dark .audio-track .solo-mute {
+    padding: 5px;
+    border-bottom: 1px solid black;
+  }
+
+  .dark .audio-track .volume-meter {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .dark .rangeslider-vertical {
+    width: 4px;
+    margin-top: 5px;
+  }
+
+  .dark .rangeslider-vertical .rangeslider__handle {
+    width: 12px;
+    height: 25px;
+    left: -4px;
+  }
+
+  .dark .rangeslider .rangeslider__handle {
+    /* background: #9f9793; */
+    background: linear-gradient('red 1%', '#ff0 16%', 'lime 45%', '#080 100%');
+    border: 1px solid black;
+  }
+
+  .dark .rangeslider .rangeslider__handle-tooltip {
+    display: none;
+  }
+
+
+  .clear-screen {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+    transform: scale(1);
+    animation: pulseRed 2s infinite;
+  }
+
+
+
+  @keyframes pulseRed {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(161, 34, 34, 0.8);
+    }
+  
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 12px rgba(0, 0, 0, 0);
+    }
+  
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+  }
+  
+
+ 

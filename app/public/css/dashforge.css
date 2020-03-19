@@ -3226,7 +3226,7 @@ input[type="button"].btn-block {
   .dropdown-item.active, .dropdown-item:active {
     color: #fff;
     text-decoration: none;
-    background-color: #0168fa; }
+    background-color: #eee; }
   .dropdown-item.disabled, .dropdown-item:disabled {
     color: #7987a1;
     pointer-events: none;
@@ -8425,7 +8425,7 @@ strong {
   .dropdown-item:hover, .dropdown-item:focus {
     background-color: #e5e9f2; }
   .dropdown-item.active {
-    background-color: #0168fa; }
+    background-color: #eee; }
 
 .dropdown-header {
   padding-left: 15px;

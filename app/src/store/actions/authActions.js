@@ -1,3 +1,6 @@
+var zipcodes = require('zipcodes');
+
+
 export const signIn = (credentials) => {
     return (dispatch, getState, {getFirebase }) => {
         const firebase = getFirebase();
@@ -29,19 +32,26 @@ export const signUp = (newUser) => {
         const firebase = getFirebase();
         const db = getFirestore();
 
+        var locationData = zipcodes.lookup(newUser.postal.trim());
+
         firebase.auth().createUserWithEmailAndPassword(
             newUser.email,
             newUser.password
         ).then((response) => {
             return db.collection('users').doc(response.user.uid).set({
-                firstName: newUser.firstName,
-                lastName: newUser.lastName,
-                email: newUser.email,
-                settings_receiveEmailNotificatons: true,
-                settings_sendEmailDelay: null,
-                settings_sendThankYouEmail: false,
+                first_name: newUser.firstName.trim(),
+                last_name: newUser.lastName.trim(),
+                email: newUser.email.trim(),
                 created_at: new Date(),
-                usage: 0
+                dob: {
+                    month: newUser.dobMonth,
+                    day: newUser.dobDay,
+                    year: newUser.dobYear,
+                    age: new Date().getFullYear() - newUser.dobYear
+                },
+                address : {
+                    ...locationData
+                }
             })
         }).then(() => {
             dispatch({ type: 'SIGNUP_SUCCESS' })

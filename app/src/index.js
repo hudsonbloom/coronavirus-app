@@ -13,6 +13,7 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 
 import Profile from './components/Profile/Profile'
 import Login from './components/Auth/SignIn'
+import SignUp from './components/Auth/SignUp'
 
 
 const store = createStore(rootReducer,
@@ -33,14 +34,13 @@ store.firebaseAuthIsReady.then(() => {
         <BrowserRouter>
         <Switch>
             
-            {/* <Route exact path="/" render={() => (
-                <Redirect to="/dashboard"/>
-            )}/> */}
+            {/* <Route path="/" render={() => <Redirect to="/profile"> } /> */}
 
             <Route exact path="/" component={App} />
-            <Route exact path="/profile" component={Profile} />
+            {/* <Route exact path="/profile" component={Profile} /> */}
 
             <Route exact path="/login" component={Login} />
+            <Route exact path="/signup" component={SignUp} />
         </Switch>
         
         </BrowserRouter>

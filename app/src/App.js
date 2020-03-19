@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 
+import Profile from './components/Profile/Profile'
+import Header from './components/Layouts/Header'
+import Dashboard from './components/Dashboard/Dashboard'
+
 class App extends Component {
   render (){
 
@@ -12,14 +16,14 @@ class App extends Component {
         <BrowserRouter>
         <div className="content ht-100v pd-0 dark">
 
-            {/* <Switch>
-              <Route exact path="/v1/dashboard" component={Dashboard} />
-            </Switch> */}
+        <Header profile={profile} />
 
-            <h1>App</h1>
-            
-                
-      
+            <Switch>
+              <Route exact path="/" component={Dashboard} />
+              <Route exact path="/profile" component={Profile} />
+            </Switch>
+
+          
         </div>
       </BrowserRouter>
     );

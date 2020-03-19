@@ -34,14 +34,14 @@ class SignIn extends Component {
           <div className="sign-wrapper">
             <div style={{width:"300px"}}>
                 <div className="text-center" style={{paddingBottom:"20px"}}>
-                <Link to="/">
+                {/* <Link to="/">
                     <img src="/img/bolt-logo.png" alt="Logo" style={{width:"200px", marginTop:"-8px", marginBottom:"0px"}}></img>
-                </Link>
+                </Link> */}
 
                 </div>
 
               {/* <h3 className="tx-color-01 mg-b-5">Sign In</h3> */}
-              <p className="text-center tx-color-03 tx-16 mg-b-30">GameMaster & Waiver Software</p>
+              <p className="text-center tx-color-03 tx-16 mg-b-30">Please Sign In</p>
 
               <div style={{paddingBottom:"0px", fontWeight:"bold", maxWidth:"300px"}}>
                              { authError ? <p style={{color:"red"}}>{authError}</p> : null }
